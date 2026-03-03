@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -217,7 +218,7 @@
             <div class="hero-text">
                 15 лет успешной практики. Много выигранных дел.
             </div>
-            <button class="btn" onclick="openModal()">Бесплатная консультация</button>
+            <a href="mailto:swechnikov.work@yandex.ru?subject=Заявка с сайта&body=Здравствуйте! Меня зовут: %0AМой телефон: %0AМой вопрос:" class="btn">Бесплатная консультация</a>
         </div>
     </div>
 
@@ -289,7 +290,7 @@
             <div class="contact-info">
                 📍 Новороссийск
             </div>
-            <button class="btn" onclick="openModal()" style="margin-top: 20px;">Заказать звонок</button>
+            <a href="mailto:swechnikov.work@yandex.ru?subject=Заказ звонка&body=Перезвоните мне пожалуйста.%0AМой телефон: %0AМое имя:" class="btn" style="margin-top: 20px;">Заказать звонок</a>
         </div>
     </div>
 
@@ -300,49 +301,19 @@
         </div>
     </div>
 
-    <!-- Форма заявки (всплывающая) -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3>Заказать звонок</h3>
-            <p>Оставьте номер, я перезвоню через 30 минут</p>
-            <input type="text" placeholder="Ваше имя" id="name">
-            <input type="tel" placeholder="Телефон" id="phone">
-            <button class="btn" onclick="sendForm()">Отправить</button>
         </div>
-    </div>
 
     <script>
-        function openModal() {
-            document.getElementById('modal').style.display = 'block';
-        }
-
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
-
-        function sendForm() {
-            let name = document.getElementById('name').value;
-            let phone = document.getElementById('phone').value;
-            
-            if (name && phone) {
-                alert('Спасибо! Я перезвоню вам в ближайшее время.');
-                closeModal();
-            } else {
-                alert('Пожалуйста, заполните имя и телефон');
-            }
-        }
-
-        // Закрыть модальное окно при клике вне его
-        window.onclick = function(event) {
-            let modal = document.getElementById('modal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
+       <script>
+// Просто заглушка, чтобы не было ошибок
+function closeModal() {
+    // ничего не делаем
+}
+</script>
     </script>
 </body>
 </html>    
+
 
 
 
